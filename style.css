@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f6300d;
+}
+
+/* it creating a box having quote of the day and its contents */
+.wrapper{
+    width: 600px;
+    background: #fff;
+    border-radius: 13px;
+    /* top-left-bottom */
+    padding: 30px 30px 25px;
+}
+
+/* to modify the Quote of the day which is the header */
+.wrapper header{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* content class is a wrapper class or container which contains quote area class i,e quote and icons */
+.wrapper .content{
+    margin: 35px 0;
+}
+
+/* to modify the icons containing double quotes */
+.content .quote-area{
+    display: flex;
+    justify-content:center;
+}
+.quote-area i{
+    font-size: 15px;
+
+}
+
+/* to modify left double quote */
+.quote-area i:first-child{
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child{
+    display: flex;
+    /* the items are positioned at the end of center */
+    align-items: flex-end;
+    /* top-right-bottom-left */
+    margin: 0 0 13px 10px;
+}
+/* to modify the quote */
+.quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+}
+
+/* to modify the author part */
+.content .author{
+    display: flex;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+.author span:first-child{
+    /* top-left- */
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+.wrapper .buttons{
+    /* it'll draw a line of the color mentioned just before the icons i.e border-top */
+    border-top: 1px solid #ccc;
+}
+
+/* features class contain all the font awesome icons and buttons */
+.buttons .features{
+    display: flex; /* make both button and icons on same line */
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.features ul{
+    display: flex; /*flex icons on same row*/
+
+}
+
+.features ul li{
+    list-style: none;
+    margin: 0 5px;  /*every list item will be 5 px from left, that is it'll create space between all the icons as diplay: flex made all icons at same line without having any space*/
+    height: 47px; /* it refers to the height of the icons*/
+    width: 47px; /* it'll make width 47px*/
+    color:#f6300d;
+    display: flex;
+    cursor: pointer;
+    justify-content: center; /*make the icons aligned at center*/
+    align-items: center; /*make the icons aligned at center*/
+    border-radius: 50%;
+    border: 2px solid #f6300d; /*it'll create borders(boxes) around each and every icon*/
+    transition: all 0.3s ease;
+}
+
+/* adding hover effect */
+.features ul li:hover{
+    color:#fff; /*change the color of icons to white*/
+    background: #f6300d; /*change the background to red*/
+}
+.features button{
+    border:none; /* remove all the by default created decorations*/
+    outline: none;
+    /* top-bottom & left-right */
+    padding: 13px 22px;
+    background: #f6300d;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+button.loading{
+    opacity: 0.7;
+    pointer-events: none; /*making no pointer at the time of loading*/
+} /*but this will make new quote opacity and pointer-events to none even after the quote has been generated,
+ so to get back so that we can again click on button, we need to add a little bit in js*/
